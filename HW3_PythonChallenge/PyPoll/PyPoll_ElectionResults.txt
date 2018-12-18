@@ -1,0 +1,10 @@
+============================================================
+These are the results of this year's election
+There are a total of 3521001 votes casted
+Candidate Khan has 63.00% of votes with 2218231 votes casted
+Candidate Correy has 20.00% of votes with 704200 votes casted
+Candidate O Tooley has 3.00% of votes with 105630 votes casted
+These are the results of the election {'Khan': 2218231, 'Correy': 704200, 'Li': 492940, 'O Tooley': 105630}
+The winner is ['Khan'] with 2218231 votes!
+This is the end of Election Analysis
+============================================================
