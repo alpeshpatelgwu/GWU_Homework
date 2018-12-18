@@ -1,0 +1,9 @@
+============================================================
+This is your financial analysis of Py Bank
+There are a total of 86 months
+The total profit/loss margin is $38382578
+The average change is $-2315.12
+The Max Increase value is Feb-2012 $1926159
+The Max Decrease value is Sep-2013 $-2196167
+This is the end of Bank Analysis
+============================================================
