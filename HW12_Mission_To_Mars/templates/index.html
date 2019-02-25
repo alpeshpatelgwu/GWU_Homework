@@ -27,19 +27,19 @@
             <div class=" col-lg-3 alert alert-dismissible alert-warning">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <h4 class="alert-heading">Latest Mars News!</h4>
-                <p class="mb-0"> <a href="#" class="alert-link"></a>{{ mars_data.news_date }}</mars></p>
-                <p>{{ mars_data.news_title }}</p>
-                <p>{{ mars_data.news_teaser }}</p>
+                <p class="mb-0"> Updated on: {{ mars.news_date }}</p>
+                <p>{{ mars.news_title }}</p>
+                <p>{{ mars.news_teaser }}</p>
               </div>
               <div class=" col-lg alert alert-dismissible alert-secondary">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <h4 class="alert-heading">Featured Mars Image</h4>
-                <img src="{{mars_data.url_img_featured}}" style="max-width: 100%; max-height: auto;" alt="Mars Featured Image">
+                <img src="{{ mars.url_img_featured }}" style="max-width: 100%; max-height: auto;" alt="Mars Featured Image">
               </div>
               <div class=" col-lg-3 alert alert-dismissible alert-secondary">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <h4 class="alert-heading">Mars Facts</h4>
-                <p class="mb-0">{{mars_data.mars_facts}}</p>
+                <p class="mb-0">{{ mars.mars_facts }}</p>
             </div>
         </div>
     </div>

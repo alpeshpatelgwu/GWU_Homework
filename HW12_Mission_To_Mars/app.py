@@ -18,7 +18,7 @@ def home():
     mars_data = mongo.db.mars_data.find_one()
 
     # Return data found to template (index.html) and data
-    return render_template("index.html", mars_data=mars_data)
+    return render_template("index.html", mars=mars_data)
 
 
 # Route that will trigger scraping the mars data function
@@ -28,13 +28,15 @@ def scrape():
 
     # Run the scrape function
     mars_data = mongo.db.mars_data
-    mars_data = scrape_mars.scrape_mars_news
-    mars_data = scrape_mars.scrape_mars_facts
-    mars_data = scrape_mars.scrape_mars_weather
-    mars_data = scrape_mars.scrape_mars_hemisphere
+    mars_data = scrape_mars.scrape_mars_news()
+    mars_data = scrape_mars.scrape_featured_img()
+    mars_data = scrape_mars.scrape_mars_facts()
+    mars_data = scrape_mars.scrape_mars_weather()
+    mars_data = scrape_mars.scrape_mars_hemisphere()
+    #mars_data.update({}, mars_data, upsert=True)
     
     # Update the Mongo database using update and upsert=True
-    mongo.db.collection.update({}, mars_data, upsert=True)
+    mongo.db.mars_data.update({}, mars_data, upsert=True)
 
     # Redirect back to home page
     return redirect("/")
