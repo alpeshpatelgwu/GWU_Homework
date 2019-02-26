@@ -177,13 +177,13 @@ def scrape_mars_hemisphere():
         full_img_url = url_main + soup.find('img', class_='wide-image')['src']
         
         # Append information into a list of dictionaries 
-        hemisphere_img_url.append({"Title" : title, "Full Size Image Link" : full_img_url})
+        hemisphere_img_url.append({"title" : title, "img_url" : full_img_url})
     
     #Print the consolidated list of images in Hemisphere
     hemisphere_img_url
 
     # Create dictionary for Mars hemispheres
-    mars_data['Mars Hemisphere Images'] = hemisphere_img_url
+    mars_data['hemi_img_url'] = hemisphere_img_url
 
     browser.quit()
 
